@@ -1,0 +1,92 @@
+/* Aca definimos las custom properties, osea las configuraciones principales como el color de las letras*/
+:root{
+    --color-primario: #6a4092;
+    --color-secundario: #f0f0f0;
+    /*Aca definimos las tipografias*/
+    --tipo-principal : Arial, Helvetica, sans-serif;
+    --tipo-secundaria: Verdana; 
+}
+/*Reseteamos los margin y paddings de todas las etiquetas*/
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+img, picture, video, iframe, figure{
+    max-width: 100%;
+    width: block;
+    /*opcional, pero es si queremos ponerle una altura a la imagen, se adapte*/ 
+    object-fit: cover;
+    object-position: center center;
+}
+/*Reseteamos los enlaces para funcionar como cajas...*/
+a{
+    display: block;
+}
+/*..excepto los que se encuentran en parrafos*/
+p a{
+    display: inline;
+}
+/* Sacamos todos los puntos de los <li> y todos los numeros en el caso de las listas desordenadas y ordenadas <ul> <ol>*/
+li {
+    list-style-type: none;
+}
+/*Vamos a configurar un extra que es cuando utilizamos en una etiqueta <a> en href"utilizamos un ancla"*/
+html {
+    scroll-behavior: smooth; 
+}
+/*Vamos a desactivar los estilos que vienen por defecto en las principares etiquetas de texto*/
+h1 , h2 , h3 , h4 , h5 , h6 , p , span , a , strong , blockquote , i , b , u , em{
+    font-size: 1em; /*es para que la tipografia se adapte al tamaño que tenga la etiqueta de body*/
+    /* sacar la herencia para poder configurar desde la etiqueta contenedora o bloque para que todo sea unificado*/
+    font-weight: inherit;
+    /* para que en el supuesto caso una etiqueta venga heredado por defecto*/
+    font-style: inherit;
+    /* espara desactivar esas lineas, y esos subrrayados de las etiquetas <a> por ej.*/
+    text-decoration: none;
+    /*desactivar el color azul por ej de <a>*/
+    color: inherit;
+}
+/*Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+/*Cuando nosotros seleccionamos un texto, como se ve, es decir que cuando por defecto seleccionamos un texto el color esta predefinido, le vamos a poner el color que usemos en la pagina, para que tambien quede personalizado*/
+::selection {
+    background-color: var(--color-primario);
+    color: var(--color-secundario)
+}
+/* Nivelemos problemas de tipografias y colocación de formularios */
+form , input , textarea , select , button , label{
+    font-family: inherit;
+    font-size: inherit;
+    hyphens: auto;
+    background-color: transparent;
+    display: block;
+    color: inherit;
+} 
+
+/* Resetear los estilos de las tablas*/
+table , tr , td {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*Evitamos problemas con los SVG*/
+svg{
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+/*Configuramos la tipografia para toda la web*/
+body {
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: var(--tipo-principal);
+    color: var(--color-primario);
+    background-color: var(--color-secundario);
+}

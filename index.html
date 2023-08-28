@@ -1,0 +1,120 @@
+<!--Para comenzar, tenemos que poner ! y apretar la tecla TAB, automaticamente aparecera el listado basico de todo html-->
+<!DOCTYPE html>
+<html lang="es">   
+    <!--Procedemos a cambiar de en a es, ya que nuestra pagina es en español y dirigido para hablahispana-->
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultora Dra Andrea Morales</title><!--Ponemos el titulo de como queremos que se llame, y como nos gustaria que figure en la ventana-->
+    <link rel="stylesheet" href="./css/rest.css"><!--LO podemos usas opcinalmente, mas que nada al principio para que tenga todo un order, a medida que hagamos la pagina, ya no sera necesario, dependiendo el tipo de pagina que se implemente // aca lo tengo como referencia pero no para usarlo se lo deje como ejemplo para que lo vean-->
+    <link rel="stylesheet" href="./css/style.css"><!--Linkeamos la carpeta de css, asi se vinculan entre si, y podemos trabajar con ella.-->
+    <link rel="icon" href="imagenes/5-logo-color.ico" type="image/x-icon"><!--Sirve para poner un icono que aparezca al lado del titulo que pongamos para la ventana // Por otro lado lo ideal es usar las imagenes con terminologia .ico para eso 
+    aca dejo un link https://imagen.online-convert.com/es/convertir-a-ico que sirve para convertir las imagenes en formato .ico-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><!--Linkearemos esta pagina que se llama boxicon, para usar el icono de swtchdark para el modo oscuro de la pagina-->
+    </head><!--Hasta aca es todo lo que no se ve-->
+    <header><!--Empezemos armar lo que va aver en la pagina-->
+    <nav><!--zona de navegacion-->
+        <div class="logo">
+            <img src="./imagenes/5-logo-blanco.png" alt="logo de inicio">
+        </div>
+        <a href="./index.html" class="textnav">Inicio</a><!--Empecemos a linkear las paginas que vamos agregar-->
+        <a href="./Pages/quienSoy.html" class="textnav">¿Quien soy?</a>
+        <div class="mode-switch-container">
+            <button class="switchdark active" id="switch">
+                <span><i class='bx bx-sun' ></i></span>
+                <span><i class='bx bxs-moon' ></i></span>
+            </button>
+            <p>Modo Oscuro</p>
+        </div>
+    </nav>
+    <!--Vamos a crear un section para el header y clasificarlo para luego poder modificarle las letras, y sus colores-->
+    <section class="titulo-header">
+        <h3>"En la Consulta de la Dra. Andrea Morales, ponemos tu salud mental en el centro. 
+            Te ofrecemos apoyo profesional y personalizado para enfrentar desafíos, crecer 
+            y encontrar equilibrio en cada paso de tu camino hacia el bienestar emocional." </h3>
+    </section>
+    </header>
+    <!--Preparemos el Body con su contenido, como la idea de la pagina es dividirlo en dos Sections grandes, uno que contenga la solicirtud de turnos, y otro que contenga el tipo de servicio que ofrece la Dra-->
+    <body>
+        <main>
+        <!--Primer section para crear el espacio para el formulario de pedido de turnos-->
+        <section class="container">
+            <article class="presencial">
+                <h1 class="h1t">Presencial:</h1> 
+                <a href="./Pages/formulario.html"><input type="submit" value="Pedir Turnos" class="form_boton"></a>
+            </article>
+            <article class="online">
+                <h1 class="h1t">Online:</h1>
+                    <h3 class="h3t">• Via Meet.</h3>
+                    <h3 class="h3t">• Videollamada Whatsapp.</h3>
+            </article>
+            <article class="certificaciones">
+                <h1 class="h1t">Certificaciones / Licencias:</h1>
+                    <h3 class="h3t">• Certificado laborales.</h3>
+                    <h3 class="h3t">• Estudios de equipo.</h3>
+            </article>
+        </section>
+        <!--Segundo section para explicar los servicios que se ofrecen-->
+        <section class="Servicios">
+            <div class="Patologia">
+                <h2>Nuestros Servicios:</h2>
+                    <p class="intro">En la Consulta Psicológica de la Dra. Andrea Morales, entendemos que cada individuo es único y puede enfrentar una amplia gama de desafíos en su vida. Nuestro enfoque comprensivo y personalizado nos permite abordar una variedad de patologías y preocupaciones, proporcionando a nuestros pacientes un espacio seguro para sanar y crecer.</p>
+            </div>
+            <!--Como hay que subdividir este section, se creo un article,subdividiendo con div explicando cada servicio // Cabe aclarar que para darle personalizacion luego a cada elemento lo ideal es dar clases, recuerden, tenemos el elemento pero si le damos una clase "Este seria como su apellido" los otros elemenos se repiten (como por ej decir que son sus nombres), pero ya poner el elemento (nombre) y su class (apellido) es mas facil llamarlo completo por nombre y apellido y asi luego en CSS lo llamamos con .(el class que le pusimos) ahora si queremos ser mas especificos tenemos el dni de los elementos, que lo vamos a llamar id. // No se olviden que esto es por jerarquia, lo mas importante se llama con #(y es el id) lo segundo es la class(se lo llama con .class) y despues el elemento.-->
+            <article class="Servicios_img">
+                <div class="imgs">
+                    <img src="imagenes/servicio1 revision laboral.png" alt="patologia 1">
+                        <h4>Revisión de empleados:</h4> 
+                            <p>Se utiliza un enfoque especializado, habilidades interpersonales y desafíos emocionales de los empleados. Esta revisión no solo permite entender mejor a los individuos, sino que también ayuda a las empresas a optimizar la dinámica del equipo y promover un ambiente laboral más saludable.
+                            </p>
+                </div>
+                <div class="imgs">
+                    <img src="imagenes/servicio2 terapia de pareja.jpg" alt="patologia 2">
+                        <h4>Terapia de Parejas:</h4>  
+                            <p>Se brinda un espacio seguro y confidencial para abordar desafíos y mejorar relaciones. Con empatía y experiencia para explorar patrones de comunicación, resolver conflictos y fortalecer la conexión emocional. Su enfoque personalizado ayuda a las parejas a encontrar soluciones constructivas y a cultivar un entorno de apoyo mutuo.
+                            </p>
+                </div>
+                <div class="imgs">
+                    <img src="imagenes/servicio3 depresion.jpeg" alt="patologia 3">
+                        <h4>Superación de la depresión:</h4>
+                            <p>Con comprensión y enfoque integral, la Dra. Morales trabaja junto a los individuos para comprender las raíces de la depresión y desarrollar estrategias para enfrentarla. Mediante terapias personalizadas, se fomenta la autoexploración, el cambio de patrones negativos y la promoción de la salud mental.
+                            </p>
+                </div>
+                <div class="imgs">
+                    <img src="imagenes/servicio4 ansiedad.jpg" alt="patologia 4">
+                        <h4>Superar la anciedad:</h4>
+                            <p>A través de terapias personalizadas, se fomenta la resiliencia, se promueve el autocuidado y se proporcionan herramientas para controlar los síntomas. La atención de la Dra. Morales ofrece un camino hacia la tranquilidad emocional, el equilibrio y la recuperación de una vida plena y activa.
+                            </p>
+                </div>
+            </article>
+        </section>
+        </main>
+        <!--Finalmente nuestro footer, en este caso decidi hacerlo simple basico, con los datos mas relevantes de contacto, y agregarle el copyng que es lo que nos representa como nosotros los que hicimos la pagina-->
+        <footer>
+            <section class="footer">
+                <article class="contacto">
+                    <h4>Telefono</h4>
+                    <p>1150202052</p>
+                </article>
+                <article class="contacto">
+                    <h4>Email</h4>
+                    <p>dra.andrea.morales@gmail.com</p>
+                </article>
+                <article class="contacto">
+                    <h4>Instagram</h4>
+                    <p>#dra.amorales</p>
+                </article>
+                <article class="contacto">
+                    <h4>Dirección</h4>
+                    <p>Av. Corrientes 2540, piso 10 Dpto C - CABA.</p>
+                </article>
+                <h2 class="copyng">&copy; Sebastian Librante</h2>
+            </section>
+        </footer>
+        <!--Aca vamos agregar justo antes del cierre del body, nuestro link de la carpeta de javascrip, agregamos la llamada de carpeta colocando src y como nuestra carpeta esta afuera ponemos ./ para llamar al script y entrar al archivo-->
+        <script src="./script/DraAndrea.js"></script>
+    </body>
+</html>
+
+
+

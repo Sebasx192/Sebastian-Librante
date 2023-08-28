@@ -1,0 +1,428 @@
+/*Arrancamos restableciendo de cero los valores del margin y padding, es como poner la hoja en blanco alinearlo en el zocalo de la impresora, para que luego la impresora (OSEA NOSOTROS)empieze a imprimir el contenido todo alineado.*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*HEADER*/
+header {  
+    /*ESTO QUE TENEMOS ABAJO LO SACAMOS DE UNA PAGINA, QUE SIRVE PARA CREAR UNAS TONALIDADES DEL COLOR QUE ELIJAMOS EN LA IMAGEN QUE PONGAMOS, ES TOTALMENTE OPCIONAL, 
+    la pagina es https://uigradients.com/#MoonlitAsteroid , vamos copiamos el codigo que nos tira, lo pegamos aca, y agregamos la imagen que querramos poner*/
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fffde475, #b48fff);  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #7373736c, #a56ee465), url(../imagenes/persona\ con\ profesional.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    }
+header .titulo-header , .h1 , .h3{
+    color: #e9e6ff;
+    /*Con este comando le vamos a crear una sombra al titulo*/
+    text-shadow: #ffffffb2 1px 1px 5px;
+    /*Tipo de letra a usar*/
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    /*Con padding vamos a generar un espacio alrededor del contenido Header, vamos a poner de la siguiente forma
+    considerando que va en este orden 00px (top) 00px (right) 00px (left) 00px (bottom)*/
+    padding: 350px 20% 50px 20%;
+    margin: 0 auto;    
+}
+/*Al logo le vamos a poner margenes, para que se adapte en el costado que quiero que quede*/
+.logo{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+/*Damos forma, color y diseño a los link NAV*/
+nav{
+    font-family: 'Montserrat', sans-serif;
+    text-align: end;
+    padding: 17px 30px 10px 1px;
+}
+.textnav{
+    color: #746cb3;
+    text-decoration: dotted;
+    font-size: 23px;
+}
+.textnav:hover{
+    color: #e9e6ff;
+    text-decoration: underline;
+}
+.mode-switch-container {
+    display: block;
+    align-items: end;
+    padding: 10px 0 0 95%;
+}
+.mode-switch-container p{
+    font-size: small;
+    text-align: justify;
+    padding-top: 7px;
+    color: #737373;
+}
+
+/*Vamos a darle forma al Boton de modo oscuro*/
+
+.switchdark{
+    background-color: #3494b1;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+/*Parte frontal del boton*/
+.switchdark span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    color: #737373;
+    background: none;
+}
+/*Parte de atras del boton*/
+.switchdark::after{
+    display: block;
+    background-color: #d2cdff;
+    width: 1.8rem;
+    height: 1.8rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 50%;
+    transition: all .5s ease;
+    box-shadow: 0 0 1.5px 1.5px rgba(0, 0, 0, 5);
+    content: "";
+}
+/*ahora le agregamos unas propiedades extras al boton de modo oscuro*/
+.switchdark.active{
+    background: #d2cdff;
+}
+.switchdark.active::after{
+    left: unset;
+    right: 0;
+}
+/*Agregamos los items necesarios para poder hacer el modo oscuro*/
+body.modo-oscuro {
+    background-color: #5a5a5a;
+    color: #e9e6ff;
+}
+body.modo-oscuro .mode-switch-container p{
+    font-size: small;
+    text-align: justify;
+    padding-top: 7px;
+    color: #8d8d8d;
+}
+/* Cambiar los colores a tonos más opacos en modo oscuro */
+body.modo-oscuro header {
+    background: -webkit-linear-gradient(to right, #6e6e6e34, #695097);
+    background: linear-gradient(to right, #83838359, #664988a6)
+}
+/*llamamos a todas las clases del body, para agregarlo al modo oscuro, en este caso solo personalizamos algunas, pero se puede personalizar todas para lograr un modo oscuro deseado*/
+body.modo-oscuro .titulo-header{
+    color: #e9e6ff;
+}
+body.modo-oscuro .h1,
+body.modo-oscuro .h3,
+body.modo-oscuro .textnav,
+body.modo-oscuro .h1t,
+body.modo-oscuro .h3t,
+body.modo-oscuro .form_boton,
+body.modo-oscuro .Patologia h2,
+body.modo-oscuro .intro,
+body.modo-oscuro .imgs h4,
+body.modo-oscuro .imgs p,
+body.modo-oscuro .contacto h4,
+body.modo-oscuro .contacto p,
+body.modo-oscuro .copyng {
+    color: #9b9b9b; /* Cambiar a tono opaco */
+}
+
+/* Cambiar los colores de fondo a tonos más opacos en modo oscuro */
+body.modo-oscuro .container,
+body.modo-oscuro .Servicios,
+body.modo-oscuro .Patologia{
+    background-color: rgba(40, 19, 61, 0.603)
+}
+body.modo-oscuro .Servicios_img,
+body.modo-oscuro .imgs, /* Cambiar a tono opaco */
+
+/* Footer en modo oscuro */
+body.modo-oscuro footer {
+    background-color: #2c2c2c; /* Cambiar a tono opaco */
+}
+
+/* Cambiar el color de los enlaces en el modo oscuro */
+body.modo-oscuro a {
+    color: #e9e6ff;
+}
+
+
+/*SECTION QUE CONTIENTE LOS OTROS Div, vamos primero con el de la seccion de tipo de turnos, por eso le agregamos la clase, para poder segmentarlo mejor.*/
+.container {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #746cb3;
+    gap: 100px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1% 3% 3% 3%;
+}
+
+.h1t{
+    color: #e9e6ff;
+    text-decoration: underline 3px;
+    font-size: 25px;
+
+}
+.h3t{
+    color: #e9e6ff;
+    padding: 5% 0 0 0;
+}
+
+/*Vamos a darle forma al boton del Formulario*/
+.form_boton{
+    padding: 10px 20px;
+    background-color: #e9e6ff;
+    color: #737373;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-top: 10%;
+}
+/*Empezamos a dar forma a los articles, con sus respectivas clases, para poder acomodar y encolumnar el contenido, darle colores, formas de letra y otros detalles*/
+.Servicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: #e9e6ff;
+}
+
+.Patologia{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Patologia h2 {
+    font-size: 37px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline 3px;
+    color: #746cb3;
+}
+
+.intro{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    text-align: justify;
+    color: #737373;
+    padding: 10px 15% 20px 15%;
+
+}
+
+.Servicios_img p{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Servicios_img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imgs{
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+}
+/*Con esto le vamos a crear una pequeña sombra en los bordes, hace que resalte los cuadros*/
+.imgs img{
+    width: 100%;
+    max-height: 150px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0  #737373;  
+    object-fit: cover;
+}
+/*Con esto le decimos a la clase, para que cuando abra la imagen, sea de tal tamaño, con fondo de color tal, y que este alineado*/
+.exp-img{
+    width: 100%;
+    height: 100vh;
+    background-color: #746cb359;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+.exp-img span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: #f2f2f2;
+    cursor: pointer;
+}
+    
+.exp-img img{
+    width: 100%;
+    max-width: 600px;
+}
+
+/*Aca le damos forma, tamaño y ubicacions a los textos y titulos usados*/
+.imgs h4{
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: left;
+    text-decoration: underline;
+    color: #737373;
+}
+.imgs p{
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: left;
+    color: #737373;
+}
+
+
+/* FOOTER*/
+/*Empezemos a dar forma al footer.*/
+
+footer {
+    background-color: #d2cdff;
+    padding: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contacto {
+    flex-basis: calc(20% - 17px); /* Dividir en 4 partes con espaciado */
+    margin-bottom: 20px;
+    text-align: center;
+}
+.contacto h4 {
+    color:#746cb3;
+    margin-bottom: 10px;
+    font-size: 25px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid #7373736c;
+    size-adjust: 20px;
+    
+}
+.contacto p {
+    color: #746cb3;
+    margin: 5px 0;
+    font-size: 20px;
+}
+.copyng{
+    text-align: center;
+    font-size: 17px;
+    margin: 20px 0 0 50%;
+    color: #737373;
+}
+
+/*Vamos a colocar algunas medidas queries, que sirven para el responsive, la idea es que se pueda visualizar en cualquier plataforma*/
+/* Estilos generales para pantallas grandes es lo que usamos anteriormente*/
+/* ... Ahora personalizamos para 768px / 480px / 360px ... */
+
+/* Media Query para pantallas medianas */
+@media (max-width: 768px) {
+
+.logo{
+    display: flex;
+    align-content: center;
+}
+header .titulo-header{
+    display: flex;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+.mode-switch-container{
+    padding: 10px 5% 0 5%;
+}
+.footer, .copyng{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+}
+
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 480px) {
+.logo{
+    display: none;
+}
+header .titulo-header{
+    padding: 100px 5% 50px 5%;
+}
+.container{
+    display: block;
+    flex-direction: column;
+    align-items: center;
+}
+.mode-switch-container{
+    padding: 10px 5% 0 5%;
+}
+.footer , .copyng{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+}
+
+
+/* Media Query para pantallas aun más chicas */
+@media (max-width: 360px) {
+.header{
+    background-image: url(../imagenes/5-logo-blanco.png);
+}
+.logo{
+    display: none;
+}
+header .titulo-header{
+    padding: 80px 3% 25px 3%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Servicios_img{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.mode-switch-container{
+    padding: 5px 3% 0 3%;
+}
+.footer , .copyng{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+}

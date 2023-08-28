@@ -1,0 +1,26 @@
+<!DOCTYPE html><!--copiamos tal como lo tenemos en el index original solo que le sacamos el tipo de linkeado en css, ya que tenemos que crear otro, para evitar que se mezclen-->
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deja tus datos para Turnos</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/formulario.css">
+    <link rel="shortcut icon" href="../imagenes/5-logo-color.ico" type="image/x-icon">
+    </head>
+    <body>
+        <form class="formulario" action="https://formspree.io/f/mknlrgvd" method="POST"><!--Linkeamos con la pagina como dice en la misma, una vez que nos registramos, validamos el email, 
+            y creamos el formulario. de esta forma todos los datos llegaran al email, registrado-->
+            <div class="form_turnos"><!--Creamos un div, con la clase, y empezamos armar el formulario, con una clase en particular que nos sirva para identificar y luego poder llamarlo en css-->
+                <h2 class="form_titulo">Para sacar turnos nuestro equipo se pondra en contacto.</h2>
+                    <input type="text" class="form_input" placeholder="Nombre" name="Nombre">
+                    <input type="text" class="form_input" placeholder="Apellido" name="Apellido">
+                    <input type="email" class="form_input" placeholder="Email" name="Email">
+                    <input type="tel" class="form_input" placeholder="Ingrese su telefono" name="Numero de telefono">
+                    <textarea class="form_input form_input--mensaje" placeholder="Dejanos una reseña del caso a tratar"></textarea>
+                    <!--Usamos un textarea, para que la persona pueda dejarnos una reseña de lo que le pasa.-->
+                    <input type="submit" value="Enviar" class="form_botón">
+            </div>
+        </form>
+    </body>
+</html>

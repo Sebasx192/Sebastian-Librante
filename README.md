@@ -16,13 +16,13 @@ El objetivo de este proyecto es proporcionar a los alumnos un ejemplo práctico 
 3. Explora el código fuente en las carpetas `css` y `js` para ver cómo se ha construido la página.
 
 ## Contenido
-  >> Arrancamos con los archivos HTML - `index.html`: El archivo HTML principal que contiene la estructura de la página.
+Arrancamos con los archivos HTML - `index.html`: El archivo HTML principal que contiene la estructura de la página.
                                       - `quienSoy.html` : Segunda ventana, explicando la experiencia de la dra, y se puede apreciar los diplomas.
                                       - `formulario.html` : Ventana escondida que se accede clekeando el boton de PEDIR TURNOS, este formulario es totalmente funcional, si se manda datos, se envia automaticamente al email de la DRA (en este caso a mi email jaja xD)
-  >> Seguimos con los CSS - `css/style.css`: El archivo CSS que define los estilos visuales de la página INDEX Y ¿QUIEN SOY?
+Seguimos con los CSS - `css/style.css`: El archivo CSS que define los estilos visuales de la página INDEX Y ¿QUIEN SOY?
                           - `css/formulario`: en este css se define los estilos visuales del FORMULARIO.
                           - `css/reset`: en este CSS si bien no esta linkeado directamente (osea figura, pero no esta bien linkeado, aproposito) ya que se lo creo de manera informativa, para que se tenga en cuenta que es y para que sirve.
-  >> Y por ultimo tenemos a la carpeta script que contiene el archivo de JAVASCRIPT - `script/DraAndrea.js`: El archivo JavaScript que proporciona interacciones básicas.
+Y por ultimo tenemos a la carpeta script que contiene el archivo de JAVASCRIPT - `script/DraAndrea.js`: El archivo JavaScript que proporciona interacciones básicas.
 
 
 Espero que les guste, y  sirva de ejemplo.
